@@ -3,16 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { BodyComponent } from './components/body/body.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { DatabindingComponent } from './components/databinding/databinding.component';
 
 @NgModule({
+  // components, directives,pipes
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavbarComponent,
+    BodyComponent,
+    CategoriesComponent,
+    CarouselComponent,
+    DatabindingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  // all the dependent modules
+  imports: [BrowserModule, AppRoutingModule],
+  // Services
   providers: [],
-  bootstrap: [AppComponent]
+  // Which components to load
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
