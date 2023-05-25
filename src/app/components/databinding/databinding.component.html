@@ -9,16 +9,41 @@
 <img bind-src="img_url" alt="No Image Available" class="m-1">
 =============================================================<br />
 <input value="Sachin" class="m-1" />
-<input value={{name}} class="m-1" />
-<input [value]=name class="m-1" />
-<input bind-value=name class="m-1" />
+1-way: <input value={{name}} class="m-1" />
+1-way: <input [value]=name class="m-1" />
+1-way: <input bind-value=name class="m-1" />
+2-way: <input [(ngModel)]="name" class="m-1" />
 =============================================================<br />
 <button class="btn btn-primary m-1">button-1</button>
 <button class="btn btn-primary m-1" disabled={{flag}}>button-2</button>
 <button class="btn btn-primary m-1" [disabled]=flag>button-3</button>
 <button class="btn btn-primary m-1" bind-disabled=flag>button-4</button>
-=============================================================<br />
+<br />=============================================================<br />
 <button class="btn btn-primary m-1" (click)="f1()">btn-1</button>
 <button class="btn btn-primary m-1" on-click="f1()">btn-2</button>
 <button class="btn btn-primary m-1" (click)="add(10,20)">Add</button>
-
+<br />=============================================================<br />
+<h2 [hidden]="flag">Hellooooo Hiiiiiiiiiiii</h2>{{flag}}
+<button (click)="toggleFlag()">{{ flag ? 'SHOW' : 'HIDE'}}</button>
+<br />=============================================================<br />
+<input type="{{flag?'text':'password'}}" placeholder="Enter Your Password" />
+<input type="checkbox" (change)="flag=!flag" class="m-1"> Show Password
+<br />=============================================================<br />
+<textarea cols="30" rows="3" maxlength="100" [(ngModel)]="msg"></textarea>
+<p>Remaining: {{100 - msg.length}}</p>
+<br />=============================================================<br />
+<select [(ngModel)]="selectedState">
+    <Option>Odisha</Option>
+    <Option>Karnataka</Option>
+    <Option>Andhra Pradesh</Option>
+    <Option>Goa</Option>
+    <Option>Kerala</Option>
+</select>
+<h2>Your State Name is: {{selectedState}} </h2>
+<br />=============================================================<br />
+<p>Number-1: <input /></p> 
+<p>Number-2: <input /></p> 
+<button>Add</button>
+<button>Sub</button>
+<button>Mul</button>
+<p>Addition of </p>
