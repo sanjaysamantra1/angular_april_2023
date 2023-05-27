@@ -1,4 +1,9 @@
-<h3 class="text-center">This is Data Binding Component</h3>
+<style>
+    input {
+        border-radius: 5px;
+    }
+</style>
+<h3 class="text-center" style="color:red">This is Data Binding Component</h3>
 
 <div>Name is: {{name}}</div>
 <div>Name is: <span [innerHTML]="name"></span></div>
@@ -41,9 +46,17 @@
 </select>
 <h2>Your State Name is: {{selectedState}} </h2>
 <br />=============================================================<br />
-<p>Number-1: <input /></p> 
-<p>Number-2: <input /></p> 
+<p>Number-1: <input /></p>
+<p>Number-2: <input /></p>
 <button>Add</button>
 <button>Sub</button>
 <button>Mul</button>
 <p>Addition of </p>
+<br />=============================================================<br />
+<p>Number-1: <input #num1 /></p>
+<p>Number-2: <input ref-num2 /></p>
+<button (click)="addition(num1.value,num2.value)">Add</button>
+<button (click)="subtraction(num1.value,num2.value)">Sub</button>
+<br />=============================================================<br />
+<input type="text" name="myInputbox1" id="box1" placeholder="enter something..." #myBox1 />
+<button (click)="test(myBox1)">test</button>

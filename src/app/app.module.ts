@@ -11,6 +11,8 @@ import { BodyComponent } from './components/body/body.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
+import { LoginModule } from 'src/login/login.module';
+import { DirectiveComponent } from './components/directive/directive.component';
 
 @NgModule({
   // components, directives,pipes
@@ -23,9 +25,10 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
     CategoriesComponent,
     CarouselComponent,
     DatabindingComponent,
+    DirectiveComponent,
   ],
   // all the dependent modules
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, LoginModule],
   // Services
   providers: [],
   // Which components to load

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-databinding',
   templateUrl: './databinding.component.html',
+  styles: ['div{color:blue}'],
   styleUrls: ['./databinding.component.css'],
 })
 export class DatabindingComponent implements OnInit {
@@ -28,5 +29,14 @@ export class DatabindingComponent implements OnInit {
   }
   toggleFlag() {
     this.flag = !this.flag;
+  }
+  addition(a: any, b: any) {
+    alert(+a + +b);
+  }
+  subtraction(a: any, b: any) {
+    alert(a - b);
+  }
+  test(myBox1: any) {
+    console.log(myBox1.id, myBox1.name, myBox1.placeholder);
   }
 }

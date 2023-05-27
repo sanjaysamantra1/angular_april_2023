@@ -1,0 +1,34 @@
+<h2 class="text-center">This is Directive Component</h2>
+<hr>
+<h4 *ngIf="a%2 === 0">{{a}} is Even Number</h4>
+<h4 *ngIf="a%2 !== 0">{{a}} is Odd Number</h4>
+<hr>
+<div *ngIf="a%2 ===0 ; else odd">
+    {{a}} is Even Number
+</div>
+<ng-template #odd>
+    <div>{{a}} is odd number</div>
+</ng-template>
+<hr />
+<h4>Day Number is: {{dayNumber}}</h4>
+<h4 [ngSwitch]="dayNumber">
+    <p *ngSwitchCase="1">Monday</p>
+    <p *ngSwitchCase="2">Tuesday</p>
+    <p *ngSwitchCase="3">Wednesday</p>
+    <p *ngSwitchCase="4">Thursday</p>
+    <p *ngSwitchCase="5">Friday</p>
+    <p *ngSwitchCase="6">Saturday</p>
+    <p *ngSwitchCase="0">Sunday</p>
+    <p *ngSwitchDefault>Not a valid number</p>
+</h4>
+<hr>
+<ol>
+    <li *ngFor="let city of cities">
+        {{city}}
+    </li>
+</ol>
+<select name="" id="">
+    <option *ngFor="let city of cities">
+        {{city}}
+    </option>
+</select>
