@@ -27,8 +27,42 @@
         {{city}}
     </li>
 </ol>
-<select name="" id="">
+<select>
     <option *ngFor="let city of cities">
         {{city}}
     </option>
 </select>
+<hr />
+<div *ngFor="let city of cities;let i=index">
+    {{city}}----{{i}}
+</div>
+<hr />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Sl No.</th>
+            <th>Eid</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>is First?</th>
+            <th>is Last?</th>
+            <th>is Even?</th>
+            <th>is odd?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees;let i=index;
+            let is_first = first;let is_last=last;
+            let is_even=even;let is_odd=odd;trackBy:trackByEmpId">
+            <td>{{ i+1 }}</td>
+            <td>{{emp.eId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{is_first}}</td>
+            <td>{{is_last}}</td>
+            <td>{{is_even}}</td>
+            <td>{{is_odd}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" (click)="addEmployee()">Add 1 Emp</button>

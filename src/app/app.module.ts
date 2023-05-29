@@ -13,6 +13,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { LoginModule } from 'src/login/login.module';
 import { DirectiveComponent } from './components/directive/directive.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
   // components, directives,pipes
@@ -26,6 +27,7 @@ import { DirectiveComponent } from './components/directive/directive.component';
     CarouselComponent,
     DatabindingComponent,
     DirectiveComponent,
+    UserListComponent,
   ],
   // all the dependent modules
   imports: [BrowserModule, AppRoutingModule, FormsModule, LoginModule],
