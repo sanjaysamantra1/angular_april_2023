@@ -14,6 +14,7 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
 import { LoginModule } from 'src/login/login.module';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { ProductlistComponent } from './components/productlist/productlist.component';
 
 @NgModule({
   // components, directives,pipes
@@ -28,6 +29,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
     DatabindingComponent,
     DirectiveComponent,
     UserListComponent,
+    ProductlistComponent,
   ],
   // all the dependent modules
   imports: [BrowserModule, AppRoutingModule, FormsModule, LoginModule],
