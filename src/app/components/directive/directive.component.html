@@ -23,9 +23,11 @@
 </h4>
 <hr>
 <ol>
-    <li *ngFor="let city of cities">
-        {{city}}
-    </li>
+    <ng-container *ngFor="let city of cities">
+        <li *ngIf="city!=='Pune'">
+            {{city}}
+        </li>
+    </ng-container>
 </ol>
 <select>
     <option *ngFor="let city of cities">

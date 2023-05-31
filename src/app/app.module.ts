@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { LoginModule } from 'src/login/login.module';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
+import { GreetComponent } from './components/greet/greet.component';
 
 @NgModule({
   // components, directives,pipes
@@ -30,9 +33,17 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
     DirectiveComponent,
     UserListComponent,
     ProductlistComponent,
+    GreetComponent,
   ],
   // all the dependent modules
-  imports: [BrowserModule, AppRoutingModule, FormsModule, LoginModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    LoginModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
+  ],
   // Services
   providers: [],
   // Which components to load
