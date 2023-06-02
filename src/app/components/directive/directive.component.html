@@ -68,3 +68,18 @@
     </tbody>
 </table>
 <button class="btn btn-primary" (click)="addEmployee()">Add 1 Emp</button>
+<hr>
+<h2 [ngStyle]="a%2 ==0?{color:'blue'}:{color:'red'}">
+    {{a}} is {{a%2 ==0 ? 'Even Number':'Odd Number'}}
+</h2>
+<h2 [ngStyle]="a%2 ==0?myBlue:myRed">
+    {{a}} is {{a%2 ==0 ? 'Even Number':'Odd Number'}}
+</h2>
+<h2 [ngClass]="a%2==0?'my-blue':'my-red'">
+    {{a}} is {{a%2 ==0 ? 'Even Number':'Odd Number'}}
+</h2>
+
+<button class="btn" [ngClass]="a%2==0?'btn-success':'btn-danger'">Click Me</button>
+<hr />
+<input type="number" [(ngModel)]="charge" >
+<h2 [ngClass]="getClass()">Your charge Percentage is: {{charge}}</h2>

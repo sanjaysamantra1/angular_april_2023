@@ -18,6 +18,8 @@ import { DirectiveComponent } from './components/directive/directive.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
 import { GreetComponent } from './components/greet/greet.component';
+import { MymodalComponent } from './components/mymodal/mymodal.component';
+import { EmployeeCrudComponent } from './components/employee-crud/employee-crud.component';
 
 @NgModule({
   // components, directives,pipes
@@ -34,6 +36,8 @@ import { GreetComponent } from './components/greet/greet.component';
     UserListComponent,
     ProductlistComponent,
     GreetComponent,
+    MymodalComponent,
+    EmployeeCrudComponent,
   ],
   // all the dependent modules
   imports: [

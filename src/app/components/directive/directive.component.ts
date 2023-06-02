@@ -11,6 +11,7 @@ export class DirectiveComponent implements OnInit {
   ngOnInit(): void {}
 
   a: number = 5;
+  charge: number = 75;
   dayNumber: number = new Date().getDay();
   cities: string[] = ['Mumbai', 'Chennai', 'Delhi', 'Pune', 'Hyderabad'];
   employees = [
@@ -30,5 +31,18 @@ export class DirectiveComponent implements OnInit {
   }
   trackByEmpId(employee: any) {
     return employee.eId;
+  }
+
+  myBlue = { color: 'blue' };
+  myRed = { color: 'red' };
+
+  getClass() {
+    if (this.charge >= 50) {
+      return 'high';
+    } else if (this.charge >= 20) {
+      return 'medium';
+    } else {
+      return 'low';
+    }
   }
 }
