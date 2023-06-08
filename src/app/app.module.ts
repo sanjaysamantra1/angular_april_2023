@@ -20,6 +20,16 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
 import { GreetComponent } from './components/greet/greet.component';
 import { MymodalComponent } from './components/mymodal/mymodal.component';
 import { EmployeeCrudComponent } from './components/employee-crud/employee-crud.component';
+import { NumberonlyDirective } from './directives/numberonly.directive';
+import { HighlightDirective } from './directives/highlight.directive';
+import { ClickcountDirective } from './directives/clickcount.directive';
+import { ZoomDirective } from './directives/zoom.directive';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { RemainingPipe } from './custom-pipes/remaining.pipe';
+import { MysortPipe } from './custom-pipes/mysort.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { Child1Component } from './components/child1/child1.component';
+import { Child2Component } from './components/child2/child2.component';
 
 @NgModule({
   // components, directives,pipes
@@ -38,6 +48,16 @@ import { EmployeeCrudComponent } from './components/employee-crud/employee-crud.
     GreetComponent,
     MymodalComponent,
     EmployeeCrudComponent,
+    NumberonlyDirective,
+    HighlightDirective,
+    ClickcountDirective,
+    ZoomDirective,
+    PipesComponent,
+    RemainingPipe,
+    MysortPipe,
+    ParentComponent,
+    Child1Component,
+    Child2Component,
   ],
   // all the dependent modules
   imports: [

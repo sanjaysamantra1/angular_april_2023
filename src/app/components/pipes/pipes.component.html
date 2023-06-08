@@ -1,0 +1,70 @@
+<h2 class="text-center">Let's Learn Angular Pipes</h2>
+<hr />
+
+<h4>{{name}}</h4>
+<h4>{{name | uppercase}}</h4>
+<h4>{{name | lowercase}}</h4>
+<h4>{{name | titlecase}}</h4>
+================================================================
+<h4>{{mySal}}</h4>
+<h4>{{mySal | currency}}</h4>
+<h4>{{mySal | currency:'INR'}}</h4>
+<h4>{{mySal | currency:'&euro;'}}</h4>
+<!-- input | pipename : Arguement -->
+<h4>{{mySal | currency:'&#20803;'}}</h4>
+================================================================
+<h4>{{today}}</h4>
+<h4>{{today | date}}</h4>
+<h4>{{today | date : 'fullDate'}}</h4>
+<h4>{{today | date : 'fullDate' | uppercase}}</h4>
+<h4>{{today | date : 'fullDate' | lowercase}}</h4>
+<h4>{{today | date : 'mediumDate'}}</h4>
+<h4>{{today | date : 'shortDate'}}</h4>
+<h4>{{today | date : 'fullTime'}}</h4>
+<h4>{{today | date : 'mediumTime'}}</h4>
+<h4>{{today | date : 'shortTime'}}</h4>
+<h4>{{today | date : 'dd-MM-yyyy'}}</h4>
+<h4>{{today | date : 'dd.MMM.yyyy'}}</h4>
+<h4>{{today | date : 'yyyy/MMMM/dd'}}</h4>
+<h4>{{ today | date: "fullTime":"UTC" }}</h4>
+<h4>{{ today | date: "fullTime":"IST" }}</h4>
+=====================================================================
+<h4>{{ 12.111222333 | number: "3.2-5" }}</h4>
+<h4>{{ 12.1 | number: "3.2-5" }}</h4>
+<h4>{{ 12.112236 | number: "3.2-5" }}</h4>
+<h4>{{0.25 | percent}}</h4>
+=====================================================================
+<h4>{{user}}</h4>
+<h4>{{user | json}}</h4>
+<h4 *ngFor="let entry of user | keyvalue">
+    {{ entry.key }}={{ entry.value }}
+</h4>
+=====================================================================
+<h4>{{arr}}</h4>
+<h4>{{arr | slice : 2}}</h4>
+<h4>{{arr | slice : 2 : 4}}</h4>
+<h4>{{arr | slice : 2 : -2}}</h4>
+=====================================================================
+<br />
+<input type="number" [(ngModel)]="num" />
+Number is {{num}} <br /><br />
+
+<!-- <textarea cols="30" rows="4" maxlength="100" [(ngModel)]="msg"></textarea>
+<h4>Remaining Chars: {{msg | remaining}}</h4> -->
+
+<textarea cols="30" rows="4" maxlength="200" [(ngModel)]="msg"></textarea>
+<h4>Remaining Chars: {{msg | remaining : 200}}</h4>
+============================================================================
+<div>
+    Array items in original order:
+    <span *ngFor="let item of arr">{{item}},&nbsp;</span>
+</div>
+<div>
+    Array items in sorted order:
+    <span *ngFor="let item of arr | mysort">{{item}},&nbsp;</span>
+</div>
+<input type="number" #newNum />
+<button (click)="arr.push(newNum.value)">Add a new number</button>
+=============================================================================
+<input type="number" ([ngModel])="accNo">
+<p>Masked Account Numbmer:{{accNo}}</p>

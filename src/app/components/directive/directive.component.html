@@ -81,5 +81,11 @@
 
 <button class="btn" [ngClass]="a%2==0?'btn-success':'btn-danger'">Click Me</button>
 <hr />
-<input type="number" [(ngModel)]="charge" >
-<h2 [ngClass]="getClass()">Your charge Percentage is: {{charge}}</h2>
+<input type="number" [(ngModel)]="charge">
+<h2 [ngClass]="getClass()" highlight>Your charge Percentage is: {{charge}}</h2>
+<hr />
+
+<input numberonly />
+<hr>
+<h2 highlight>Hi, This is a heading, Hello Good morning</h2>
+<button clickcount>Click me</button>
