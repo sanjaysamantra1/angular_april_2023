@@ -1,0 +1,16 @@
+<p>employee-list works!</p>
+
+<table class="table table-bordered table-striped">
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.eId}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{emp.gender}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-primary mx-1" (click)="getAllEmps()">Get All emps</button>
+<button class="btn btn-secondary mx-1" (click)="getMaleEmps()">Get Male emps</button>
+<button class="btn btn-success mx-1" (click)="getFemaleEmps()">Get Female emps</button>

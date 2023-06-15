@@ -2,10 +2,15 @@
     <div class="row">
         <div class="col">
             <h3 class="text-center">This is Parent Component</h3>
-            <div>My Own data a is: {{a}}</div>
+            <div>My Own data a is: {{a}} <input [(ngModel)]='a' type="number" /></div>
             <button (click)="f1('hello')" class="btn btn-primary mx-2">f1</button>
             <button (click)="child1.f2()" class="btn btn-primary">f2</button>
             <div>My child1's data name is: {{myName}}</div>
+            <div>
+                array items are: <span *ngFor="let item of arr">{{item}},&nbsp;</span>
+                <input #newNum />
+                <button (click)="arr.push(newNum.value)" class="mx-1 myBtn">add new</button>
+            </div>
         </div>
     </div>
     <div class="row p-2">
@@ -13,7 +18,7 @@
             <app-child1 [aChild]="a" [f1]="f1" #child1 (eventObj)="receiveDataFromChild($event)"></app-child1>
         </div>
         <div class="col-sm-6" style="border:5px solid blue;">
-            <app-child2 [a]="a" [child1]="child1"></app-child2>
+            <app-child2 [a]="a" [child1]="child1" [arr]="arr"></app-child2>
         </div>
     </div>
 </div>

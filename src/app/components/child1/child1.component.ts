@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child1',
@@ -21,7 +21,15 @@ export class Child1Component implements OnInit {
     console.log('I am f2 from child-1');
   }
 
-  constructor() {}
+  constructor() {
+    console.log('Child Constructor');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('Child NgOninit');
+  }
+  ngOnChanges(myChanges: SimpleChanges): void {
+    console.log('Child ngOnChanges');
+    console.log(myChanges);
+  }
 }

@@ -30,6 +30,10 @@ import { MysortPipe } from './custom-pipes/mysort.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { Child1Component } from './components/child1/child1.component';
 import { Child2Component } from './components/child2/child2.component';
+import { MathComponent } from './components/math/math.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
+import { EmployeeService } from './services/employee.service';
 
 @NgModule({
   // components, directives,pipes
@@ -58,6 +62,9 @@ import { Child2Component } from './components/child2/child2.component';
     ParentComponent,
     Child1Component,
     Child2Component,
+    MathComponent,
+    EmployeeListComponent,
+    EmployeeAddComponent,
   ],
   // all the dependent modules
   imports: [
@@ -66,7 +73,7 @@ import { Child2Component } from './components/child2/child2.component';
     FormsModule,
     LoginModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
   ],
   // Services
   providers: [],
