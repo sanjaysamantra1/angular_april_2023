@@ -1,0 +1,17 @@
+<h1 class="text-center">Users component</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let user of users">
+            <div class="card product text-center">
+                <img src='https://www.w3schools.com/howto/img_avatar.png' class="card-img-top" alt="not available">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <p class="card-text my-title">{{user.email}}</p>
+                    <p class="card-text my-title">{{user.address.city}}</p>
+                    <p class="card-text my-title">{{user.phone}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

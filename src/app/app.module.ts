@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,10 @@ import { MathComponent } from './components/math/math.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeService } from './services/employee.service';
+import { UsersComponent } from './components/users/users.component';
+import { EmpApiComponent } from './components/emp-api/emp-api.component';
+import { MyInterceptor1 } from './utils/my-interceptor1';
+import { RetryInterceptor } from './utils/retry-interceptor';
 
 @NgModule({
   // components, directives,pipes
@@ -65,6 +70,8 @@ import { EmployeeService } from './services/employee.service';
     MathComponent,
     EmployeeListComponent,
     EmployeeAddComponent,
+    UsersComponent,
+    EmpApiComponent,
   ],
   // all the dependent modules
   imports: [
@@ -74,9 +81,13 @@ import { EmployeeService } from './services/employee.service';
     LoginModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
+    HttpClientModule,
   ],
   // Services
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor1, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: RetryInterceptor, multi: true },
+  ],
   // Which components to load
   bootstrap: [AppComponent],
 })
