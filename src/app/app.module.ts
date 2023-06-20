@@ -39,6 +39,9 @@ import { UsersComponent } from './components/users/users.component';
 import { EmpApiComponent } from './components/emp-api/emp-api.component';
 import { MyInterceptor1 } from './utils/my-interceptor1';
 import { RetryInterceptor } from './utils/retry-interceptor';
+import { Observabledemo1Component } from './components/observabledemo1/observabledemo1.component';
+import { Observabledemo2Component } from './components/observabledemo2/observabledemo2.component';
+import { Observabledemo3Component } from './components/observabledemo3/observabledemo3.component';
 
 @NgModule({
   // components, directives,pipes
@@ -72,6 +75,9 @@ import { RetryInterceptor } from './utils/retry-interceptor';
     EmployeeAddComponent,
     UsersComponent,
     EmpApiComponent,
+    Observabledemo1Component,
+    Observabledemo2Component,
+    Observabledemo3Component,
   ],
   // all the dependent modules
   imports: [
