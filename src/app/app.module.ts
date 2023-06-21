@@ -42,6 +42,7 @@ import { RetryInterceptor } from './utils/retry-interceptor';
 import { Observabledemo1Component } from './components/observabledemo1/observabledemo1.component';
 import { Observabledemo2Component } from './components/observabledemo2/observabledemo2.component';
 import { Observabledemo3Component } from './components/observabledemo3/observabledemo3.component';
+import { Observabledemo4Component } from './components/observabledemo4/observabledemo4.component';
 
 @NgModule({
   // components, directives,pipes
@@ -78,6 +79,7 @@ import { Observabledemo3Component } from './components/observabledemo3/observabl
     Observabledemo1Component,
     Observabledemo2Component,
     Observabledemo3Component,
+    Observabledemo4Component,
   ],
   // all the dependent modules
   imports: [
