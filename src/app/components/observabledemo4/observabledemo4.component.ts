@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, map, mergeMap, of, range, tap, zip } from 'rxjs';
+import { concatMap, forkJoin, map, mergeMap, of, range, tap, zip } from 'rxjs';
 
 @Component({
   selector: 'app-observabledemo4',
@@ -15,7 +15,8 @@ export class Observabledemo4Component implements OnInit {
     // this.pipeDemo();
     // this.tapDemo();
     // this.forkJoinDemo();
-    this.mergeMapDemo();
+    // this.mergeMapDemo();
+    this.concatMapDemo();
   }
   zipDemo() {
     let publisher1 = of(32, 31, 34);
@@ -70,6 +71,20 @@ export class Observabledemo4Component implements OnInit {
         mergeMap((user) => {
           const url = `https://jsonplaceholder.typicode.com/users/${user}`;
           return this.httpClient.get(url); //inner observable
+        })
+      )
+      .subscribe((userData) => {
+        console.log(userData);
+      });
+  }
+  concatMapDemo() {
+    let usersPublisher = of(2,1,4,3);
+
+    usersPublisher
+      .pipe(
+        concatMap((user) => {
+          const url = `https://jsonplaceholder.typicode.com/users/${user}`;
+          return this.httpClient.get(url); //inner observable will be resolved in a order
         })
       )
       .subscribe((userData) => {

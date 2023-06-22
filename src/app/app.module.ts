@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -43,6 +43,7 @@ import { Observabledemo1Component } from './components/observabledemo1/observabl
 import { Observabledemo2Component } from './components/observabledemo2/observabledemo2.component';
 import { Observabledemo3Component } from './components/observabledemo3/observabledemo3.component';
 import { Observabledemo4Component } from './components/observabledemo4/observabledemo4.component';
+import { Observabledemo5Component } from './components/observabledemo5/observabledemo5.component';
 
 @NgModule({
   // components, directives,pipes
@@ -80,6 +81,7 @@ import { Observabledemo4Component } from './components/observabledemo4/observabl
     Observabledemo2Component,
     Observabledemo3Component,
     Observabledemo4Component,
+    Observabledemo5Component,
   ],
   // all the dependent modules
   imports: [
@@ -90,6 +92,7 @@ import { Observabledemo4Component } from './components/observabledemo4/observabl
     NgxPaginationModule,
     Ng2SearchPipeModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   // Services
   providers: [
