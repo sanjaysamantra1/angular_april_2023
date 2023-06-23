@@ -44,6 +44,10 @@ import { Observabledemo2Component } from './components/observabledemo2/observabl
 import { Observabledemo3Component } from './components/observabledemo3/observabledemo3.component';
 import { Observabledemo4Component } from './components/observabledemo4/observabledemo4.component';
 import { Observabledemo5Component } from './components/observabledemo5/observabledemo5.component';
+import { Subjectdemo1Component } from './components/subjectdemo1/subjectdemo1.component';
+import { SendMessageComponent } from './components/send-message/send-message.component';
+import { ReceiveMessageComponent } from './components/receive-message/receive-message.component';
+import { ReceiveMessage2Component } from './components/receive-message2/receive-message2.component';
 
 @NgModule({
   // components, directives,pipes
@@ -82,6 +86,10 @@ import { Observabledemo5Component } from './components/observabledemo5/observabl
     Observabledemo3Component,
     Observabledemo4Component,
     Observabledemo5Component,
+    Subjectdemo1Component,
+    SendMessageComponent,
+    ReceiveMessageComponent,
+    ReceiveMessage2Component,
   ],
   // all the dependent modules
   imports: [
