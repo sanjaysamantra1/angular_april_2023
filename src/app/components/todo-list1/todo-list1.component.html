@@ -1,0 +1,7 @@
+<h3>Todo List-1</h3>
+<div *ngFor="let todo of todos$ | async">
+    <span [ngClass]="todo.completed ? 'text-decoration-line-through' : ''">
+        {{ todo.text }}</span>
+    <button (click)="deleteTodo(todo.id)">x</button>
+    <button (click)="toggleTodo(todo.id)">Toggle</button>
+</div>

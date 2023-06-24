@@ -48,6 +48,9 @@ import { Subjectdemo1Component } from './components/subjectdemo1/subjectdemo1.co
 import { SendMessageComponent } from './components/send-message/send-message.component';
 import { ReceiveMessageComponent } from './components/receive-message/receive-message.component';
 import { ReceiveMessage2Component } from './components/receive-message2/receive-message2.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { TodoList1Component } from './components/todo-list1/todo-list1.component';
+import { TodoList2Component } from './components/todo-list2/todo-list2.component';
 
 @NgModule({
   // components, directives,pipes
@@ -90,6 +93,9 @@ import { ReceiveMessage2Component } from './components/receive-message2/receive-
     SendMessageComponent,
     ReceiveMessageComponent,
     ReceiveMessage2Component,
+    AddTodoComponent,
+    TodoList1Component,
+    TodoList2Component,
   ],
   // all the dependent modules
   imports: [
