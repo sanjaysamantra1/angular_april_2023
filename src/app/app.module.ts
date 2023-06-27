@@ -51,6 +51,10 @@ import { ReceiveMessage2Component } from './components/receive-message2/receive-
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { TodoList1Component } from './components/todo-list1/todo-list1.component';
 import { TodoList2Component } from './components/todo-list2/todo-list2.component';
+import { FormDemo1Component } from './components/form-demo1/form-demo1.component';
+import { TemplateDrivenForm1Component } from './components/template-driven-form1/template-driven-form1.component';
+import { TemplateDrivenForm2Component } from './components/template-driven-form2/template-driven-form2.component';
+import { ModelDrivenFormComponent } from './components/model-driven-form/model-driven-form.component';
 
 @NgModule({
   // components, directives,pipes
@@ -96,6 +100,10 @@ import { TodoList2Component } from './components/todo-list2/todo-list2.component
     AddTodoComponent,
     TodoList1Component,
     TodoList2Component,
+    FormDemo1Component,
+    TemplateDrivenForm1Component,
+    TemplateDrivenForm2Component,
+    ModelDrivenFormComponent,
   ],
   // all the dependent modules
   imports: [
