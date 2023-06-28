@@ -71,4 +71,10 @@ export class ModelDrivenFormComponent implements OnInit {
   submitMyForm(form: any) {
     console.log(form);
   }
+
+  printCityName() {
+    let fname = this.registerForm.get('firstName');
+    console.log(fname);
+    debugger;
+  }
 }

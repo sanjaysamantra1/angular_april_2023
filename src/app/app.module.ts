@@ -55,6 +55,7 @@ import { FormDemo1Component } from './components/form-demo1/form-demo1.component
 import { TemplateDrivenForm1Component } from './components/template-driven-form1/template-driven-form1.component';
 import { TemplateDrivenForm2Component } from './components/template-driven-form2/template-driven-form2.component';
 import { ModelDrivenFormComponent } from './components/model-driven-form/model-driven-form.component';
+import { ModelDrivenForm2Component } from './components/model-driven-form2/model-driven-form2.component';
 
 @NgModule({
   // components, directives,pipes
@@ -104,6 +105,7 @@ import { ModelDrivenFormComponent } from './components/model-driven-form/model-d
     TemplateDrivenForm1Component,
     TemplateDrivenForm2Component,
     ModelDrivenFormComponent,
+    ModelDrivenForm2Component,
   ],
   // all the dependent modules
   imports: [
