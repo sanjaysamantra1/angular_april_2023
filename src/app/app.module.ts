@@ -56,6 +56,11 @@ import { TemplateDrivenForm1Component } from './components/template-driven-form1
 import { TemplateDrivenForm2Component } from './components/template-driven-form2/template-driven-form2.component';
 import { ModelDrivenFormComponent } from './components/model-driven-form/model-driven-form.component';
 import { ModelDrivenForm2Component } from './components/model-driven-form2/model-driven-form2.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { CareersComponent } from './components/careers/careers.component';
+import { NotfountComponent } from './components/notfount/notfount.component';
+import { PhotosComponent } from './components/photos/photos.component';
 
 @NgModule({
   // components, directives,pipes
@@ -106,6 +111,11 @@ import { ModelDrivenForm2Component } from './components/model-driven-form2/model
     TemplateDrivenForm2Component,
     ModelDrivenFormComponent,
     ModelDrivenForm2Component,
+    HomeComponent,
+    AboutusComponent,
+    CareersComponent,
+    NotfountComponent,
+    PhotosComponent,
   ],
   // all the dependent modules
   imports: [
