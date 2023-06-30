@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{photo.id}}</h5>
                     <h5 class="card-title">{{photo.title}}</h5>
-                    <button class="btn btn-primary">View</button>
+                    <button class="btn btn-primary" [routerLink]="['/photodetails', photo.id]">View</button>
                 </div>
             </div>
         </div>

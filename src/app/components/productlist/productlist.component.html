@@ -19,7 +19,8 @@
                     <p class="card-text my-title">{{product.title}}</p>
                     <p class="card-text">Price: {{product.price | currency}}</p>
                     <p class="card-text">Rating: {{product.rating.rate}}</p>
-                    <button class="btn btn-primary">View Detail</button>
+                    <button class="btn btn-primary" [routerLink]="['/productdetails']"
+                        [queryParams]="{id:product.id,title:product.title,price:product.price}">View Detail</button>
                 </div>
             </div>
         </div>

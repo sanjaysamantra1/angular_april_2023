@@ -61,6 +61,10 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { NotfountComponent } from './components/notfount/notfount.component';
 import { PhotosComponent } from './components/photos/photos.component';
+import { PhotoDetailsComponent } from './components/photo-details/photo-details.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { PermanentJobsComponent } from './components/permanent-jobs/permanent-jobs.component';
+import { ContractJobsComponent } from './components/contract-jobs/contract-jobs.component';
 
 @NgModule({
   // components, directives,pipes
@@ -116,6 +120,10 @@ import { PhotosComponent } from './components/photos/photos.component';
     CareersComponent,
     NotfountComponent,
     PhotosComponent,
+    PhotoDetailsComponent,
+    ProductDetailsComponent,
+    PermanentJobsComponent,
+    ContractJobsComponent,
   ],
   // all the dependent modules
   imports: [
