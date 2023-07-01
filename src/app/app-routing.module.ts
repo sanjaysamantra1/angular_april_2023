@@ -10,23 +10,42 @@ import { PhotoDetailsComponent } from './components/photo-details/photo-details.
 import { PhotosComponent } from './components/photos/photos.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
+import { AuthGuardChildGuard } from './guards/auth-guard-child.guard';
 import { AuthGuard } from './guards/auth.guard';
+import { HaschangesGuard } from './guards/haschanges.guard';
+import { PhotosResolverService } from './services/photos-resolver.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'aboutus', component: AboutusComponent },
+  {
+    path: 'aboutus',
+    component: AboutusComponent,
+    canDeactivate: [HaschangesGuard],
+  },
   {
     path: 'careers',
     component: CareersComponent,
     children: [
-      { path: '', component: PermanentJobsComponent },
       { path: 'permanent', component: PermanentJobsComponent },
-      { path: 'contract', component: ContractJobsComponent },
+      {
+        path: 'contract',
+        component: ContractJobsComponent,
+        canActivate: [AuthGuard],
+      },
     ],
+    // canActivateChild: [AuthGuardChildGuard],
   },
-  { path: 'products', component: ProductlistComponent,canActivate:[AuthGuard]},
+  {
+    path: 'products',
+    component: ProductlistComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'productdetails', component: ProductDetailsComponent },
-  { path: 'photos', component: PhotosComponent },
+  {
+    path: 'photos',
+    component: PhotosComponent,
+    resolve: { myPhotos: PhotosResolverService },
+  },
   { path: 'photodetails/:id', component: PhotoDetailsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: NotfountComponent },
